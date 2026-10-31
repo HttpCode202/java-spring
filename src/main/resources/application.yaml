@@ -1,3 +1,27 @@
+httpcode202:
+  datasource1:
+    databasePlatform: org.hibernate.dialect.H2Dialect
+    driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:h2
+    packagesToScan: org.github.httpcode202.spring.datasource1.model
+    jpaProperties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+    password:
+    username: SA
+  datasource2:
+    databasePlatform: org.hibernate.dialect.PostgreSQLDialect
+    driverClassName: org.postgresql.Driver
+    jdbcUrl: jdbc:postgresql://localhost:5432/postgres
+    jpaProperties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+    packagesToScan: org.github.httpcode202.spring.datasource2.model
+    password: postgres
+    username: postgres
+
 spring:
   application:
     name: java-spring
